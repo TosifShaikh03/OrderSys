@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>
+    Janata Medical Stores - Order System
+  </title>
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="print.css">
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <h1>
+      JANATA MEDICAL STORES
+    </h1>
+
+    <p>
+      Ankush Chowk Sainath Nagar Nigdi
+    </p>
+
+  </header>
+
+  <!-- MAIN CONTAINER -->
+
+  <div class="container">
+
+    <!-- CREATE ORDER -->
+
+   <!-- CREATE ORDER -->
+
+<section class="card">
+
+  <h2>Create Order</h2>
+
+  <!-- SEARCH -->
+
+  <input
+    type="text"
+    id="medicineSearch"
+    placeholder="Search Medicine..."
+    autocomplete="off"
+  >
+
+  <!-- SEARCH RESULTS -->
+
+  <div id="searchResults"
+       class="search-results">
+  </div>
+
+  <!-- SELECTED MEDICINES -->
+
+  <h3 class="selected-title">
+
+    Selected Medicines
+
+  </h3>
+
+  <!-- CHECKBOX MEDICINES -->
+
+  <div id="selectedMedicines"
+       class="checkbox-container">
+  </div>
+
+  <button onclick="confirmOrder()">
+    + Confirm Order
+  </button>
+
+</section>
+
+    <!-- ORDERS -->
+
+    <section class="card">
+
+      <h2>Orders</h2>
+
+      <div id="ordersContainer"></div>
+
+      <button onclick="printOrders()">
+        Print Orders
+      </button>
+
+    </section>
+
+  </div>
+
+  <!-- PRINT AREA -->
+
+  <div id="printArea"
+       class="print-page">
+  </div>
+
+  <!-- JS -->
+
+  <script type="module"
+          src="firebase.js">
+  </script>
+
+  <script type="module"
+          src="app.js">
+  </script>
+
+</body>
+
+</html>
