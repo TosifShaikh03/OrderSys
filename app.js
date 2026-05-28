@@ -138,7 +138,15 @@ function renderSelectedMedicines() {
       "selectedMedicines"
     );
 
+  const medicineCount =
+    document.getElementById(
+      "medicineCount"
+    );
+
   container.innerHTML = "";
+
+  medicineCount.innerText =
+    `${selectedMedicines.length} Medicines`;
 
   selectedMedicines.forEach(
     (medicine, index) => {
@@ -147,13 +155,26 @@ function renderSelectedMedicines() {
 
         <label class="checkbox-item">
 
-          <input
-            type="checkbox"
-            checked
-            value="${medicine}"
+          <div
+            style="
+              display:flex;
+              align-items:center;
+              gap:10px;
+              flex:1;
+            "
           >
 
-          ${medicine}
+            <input
+              type="checkbox"
+              checked
+              value="${medicine}"
+            >
+
+            <span>
+              ${medicine}
+            </span>
+
+          </div>
 
           <button
             class="remove-btn"
@@ -185,6 +206,18 @@ function removeMedicine(index) {
 
 function confirmOrder() {
 
+  const distributor =
+    document.getElementById(
+      "distributorSelect"
+    ).value;
+
+  if (distributor === "") {
+
+    alert("Select Distributor");
+
+    return;
+  }
+
   const checkedMedicines =
     document.querySelectorAll(
       "#selectedMedicines input[type='checkbox']:checked"
@@ -210,6 +243,8 @@ function confirmOrder() {
 
   const order = {
 
+    distributor: distributor,
+
     medicines: finalMedicines,
 
     date: new Date()
@@ -225,6 +260,10 @@ function confirmOrder() {
   selectedMedicines = [];
 
   renderSelectedMedicines();
+
+  document.getElementById(
+    "distributorSelect"
+  ).value = "";
 
   alert("Order Added Successfully");
 }
@@ -247,6 +286,14 @@ function displayOrders() {
     ordersContainer.innerHTML += `
 
       <div class="order-card">
+
+        <p>
+
+          <b>Distributor:</b>
+
+          ${order.distributor}
+
+        </p>
 
         <p>
 
@@ -311,6 +358,14 @@ function generatePrintLayout() {
         </p>
 
         <hr>
+
+        <p>
+
+          <b>Distributor:</b>
+
+          ${order.distributor}
+
+        </p>
 
         <p>
 
