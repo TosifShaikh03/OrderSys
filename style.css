@@ -180,3 +180,209 @@ button:hover {
     font-size: 24px;
   }
 }
+
+/* =========================
+   SEARCH RESULTS
+========================= */
+
+.search-results {
+
+  max-height: 250px;
+
+  overflow-y: auto;
+
+  border-radius: 10px;
+
+  margin-top: 5px;
+
+  margin-bottom: 15px;
+
+  background: white;
+
+  border: 1px solid #ddd;
+}
+
+.search-item {
+
+  padding: 12px;
+
+  cursor: pointer;
+
+  border-bottom: 1px solid #eee;
+
+  font-size: 14px;
+}
+
+.search-item:hover {
+
+  background: #eef4ff;
+}
+
+/* =========================
+   SELECTED MEDICINES BOX
+========================= */
+
+.selected-box {
+
+  background: #f8fbff;
+
+  border: 2px solid #d9e8ff;
+
+  border-radius: 14px;
+
+  padding: 15px;
+
+  margin-bottom: 20px;
+
+  min-height: 180px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.selected-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 15px;
+}
+
+.selected-header h3 {
+
+  color: #0b5ed7;
+
+  font-size: 18px;
+}
+
+.selected-header span {
+
+  background: #0b5ed7;
+
+  color: white;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+}
+
+/* =========================
+   SELECTED ITEMS
+========================= */
+
+.selected-container {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  max-height: 300px;
+
+  overflow-y: auto;
+}
+
+/* =========================
+   MEDICINE ITEM
+========================= */
+
+.checkbox-item {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background: white;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  border: 1px solid #ddd;
+
+  gap: 10px;
+}
+
+.checkbox-item input {
+
+  width: 18px;
+
+  height: 18px;
+}
+
+/* =========================
+   REMOVE BUTTON
+========================= */
+
+.remove-btn {
+
+  width: auto;
+
+  padding: 5px 10px;
+
+  background: red;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+}
+
+.remove-btn:hover {
+
+  background: darkred;
+}
+
+/* =========================
+   DISTRIBUTOR BOX
+========================= */
+
+.distributor-box {
+
+  margin-bottom: 15px;
+}
+
+.distributor-label {
+
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-weight: bold;
+
+  color: #0b5ed7;
+}
+
+/* =========================
+   SELECT DROPDOWN
+========================= */
+
+#distributorSelect {
+
+  width: 100%;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  border: 1px solid #ccc;
+
+  font-size: 15px;
+
+  outline: none;
+
+  background: white;
+}
+
+#distributorSelect:focus {
+
+  border-color: #0b5ed7;
+}
