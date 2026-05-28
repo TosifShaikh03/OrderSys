@@ -40,15 +40,53 @@
 
   <div class="container">
 
-    <!-- CREATE ORDER -->
-
-   <!-- CREATE ORDER -->
+<!-- CREATE ORDER -->
 
 <section class="card">
 
   <h2>Create Order</h2>
 
-  <!-- SEARCH -->
+  <!-- DISTRIBUTOR SELECTION -->
+
+  <div class="distributor-box">
+
+    <label class="distributor-label">
+
+      Select Distributor
+
+    </label>
+
+    <select id="distributorSelect">
+
+      <option value="">
+        Choose Distributor
+      </option>
+
+      <option value="Apollo">
+        Apollo
+      </option>
+
+      <option value="Cipla">
+        Cipla
+      </option>
+
+      <option value="Sun Pharma">
+        Sun Pharma
+      </option>
+
+      <option value="MedPlus">
+        MedPlus
+      </option>
+
+      <option value="Wellness Forever">
+        Wellness Forever
+      </option>
+
+    </select>
+
+  </div>
+
+  <!-- SEARCH BOX -->
 
   <input
     type="text"
@@ -65,17 +103,27 @@
 
   <!-- SELECTED MEDICINES -->
 
-  <h3 class="selected-title">
+  <div class="selected-box">
 
-    Selected Medicines
+    <div class="selected-header">
 
-  </h3>
+      <h3>
+        Selected Medicines
+      </h3>
 
-  <!-- CHECKBOX MEDICINES -->
+      <span id="medicineCount">
+        0 Medicines
+      </span>
 
-  <div id="selectedMedicines"
-       class="checkbox-container">
+    </div>
+
+    <div id="selectedMedicines"
+         class="selected-container">
+    </div>
+
   </div>
+
+  <!-- CONFIRM BUTTON -->
 
   <button onclick="confirmOrder()">
     + Confirm Order
